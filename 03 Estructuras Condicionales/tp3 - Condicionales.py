@@ -101,4 +101,67 @@ print(f"los numeros aleatorio fue: {numeros_aleatorios}")
 #pantalla.
 
 
-palabra = input("")
+palabra = input("Ingrese una frase o palabra: ")
+vocales = "aeiou"
+
+if palabra[-1] in vocales:
+    palabra+= '!'
+    print(palabra)
+else:
+    print("no termina en vocal")
+
+
+#8) Escribir un programa que solicite al usuario que ingrese su nombre y el número 1, 2 o 3
+#dependiendo de la opción que desee:
+#1. Si quiere su nombre en mayúsculas. Por ejemplo: PEDRO.
+#2. Si quiere su nombre en minúsculas. Por ejemplo: pedro.
+#3. Si quiere su nombre con la primera letra mayúscula. Por ejemplo: Pedro.
+#El programa debe transformar el nombre ingresado de acuerdo a la opción seleccionada por el
+#usuario e imprimir el resultado por pantalla. Nota: investigue uso de las funciones upper(),
+#lower() y title() de Python para convertir entre mayúsculas y minúsculas.
+
+nombre = input("Ingrese su nombre: ")
+print("1. Si quiere su nombre en mayúsculas. Por ejemplo: PEDRO.")
+print("2. Si quiere su nombre en minúsculas. Por ejemplo: pedro.")
+print("3. Si quiere su nombre con la primera letra mayúscula. Por ejemplo: Pedro")
+opcion = int(input("Ingrese una de las opciones anteriores: "))
+
+if opcion == 1:
+    print(nombre.upper())
+elif opcion==2:
+    print(nombre.lower())
+else:
+    print(nombre.capitalize())
+
+#9) Escribir un programa que pida al usuario la magnitud de un terremoto, clasifique la
+#magnitud en una de las siguientes categorías según la escala de Richter e imprima el resultado
+#por pantalla:
+#● Menor que 3: "Muy leve" (imperceptible).
+#● Mayor o igual que 3 y menor que 4: "Leve" (ligeramente perceptible).
+#● Mayor o igual que 4 y menor que 5: "Moderado" (sentido por personas, pero
+#generalmente no causa daños).
+#● Mayor o igual que 5 y menor que 6: "Fuerte" (puede causar daños en estructuras
+#débiles).
+#● Mayor o igual que 6 y menor que 7: "Muy Fuerte" (puede causar daños significativos).
+#● Mayor o igual que 7: "Extremo" (puede causar graves daños a gran escala).
+
+magnitud_terremoto = int(input("Ingrese la magnitud del terremoto: "))
+
+if (magnitud_terremoto < 3):
+    print("Muy leve")
+    print( 'imperceptible')
+elif magnitud_terremoto >= 3 and magnitud_terremoto < 4:
+    print("Leve")
+    print("ligeramente perceptible")
+elif magnitud_terremoto >= 4 and magnitud_terremoto < 5:
+    print("Moderado")
+    print("sentido por personas, pero generalmente no causa daños")
+elif magnitud_terremoto >= 5 and magnitud_terremoto < 6:
+    print("Fuerte")
+    print('puede causar daños en estructuras débiles')
+elif magnitud_terremoto >= 6 and magnitud_terremoto <7:
+    print("Muy fuerte")
+    print("puede causar daños significativos")
+elif magnitud_terremoto >= 7:
+    print("Extremo")
+    print("puede causar graves daños a gran escala")
