@@ -148,20 +148,36 @@ else:
 magnitud_terremoto = int(input("Ingrese la magnitud del terremoto: "))
 
 if (magnitud_terremoto < 3):
-    print("Muy leve")
+    print("Muy leve:")
     print( 'imperceptible')
 elif magnitud_terremoto >= 3 and magnitud_terremoto < 4:
-    print("Leve")
+    print("Leve:")
     print("ligeramente perceptible")
 elif magnitud_terremoto >= 4 and magnitud_terremoto < 5:
-    print("Moderado")
+    print("Moderado:")
     print("sentido por personas, pero generalmente no causa daños")
 elif magnitud_terremoto >= 5 and magnitud_terremoto < 6:
-    print("Fuerte")
+    print("Fuerte:")
     print('puede causar daños en estructuras débiles')
 elif magnitud_terremoto >= 6 and magnitud_terremoto <7:
-    print("Muy fuerte")
+    print("Muy fuerte:")
     print("puede causar daños significativos")
 elif magnitud_terremoto >= 7:
-    print("Extremo")
+    print("Extremo:")
     print("puede causar graves daños a gran escala")
+
+#10) Utilizando la información aportada en la siguiente tabla sobre las estaciones del año
+#Escribir un programa que pregunte al usuario en cuál hemisferio se encuentra (N/S), qué mes
+#del año es y qué día es. El programa deberá utilizar esa información para imprimir por pantalla
+#si el usuario se encuentra en otoño, invierno, primavera o verano.
+
+hemisferio = input("Ingrese el hemisferio donde se encuentra (N/S) : ")
+mes =  input("Ingrese el mes del año: ")
+dia = int(input("Ingrese el día: "))
+calendario = (20,21,22,23,24,25,26,27,28,29,30,31,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19)
+
+if mes == "Diciembre" or mes == "Enero" or mes == "Febrero" or mes == "Marzo" and (dia<1 or dia == 21) and hemisferio=='S':
+    print ("verano") 
+else:
+    print("invierno")
+
