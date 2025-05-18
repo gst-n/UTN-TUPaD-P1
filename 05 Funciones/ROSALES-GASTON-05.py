@@ -38,10 +38,21 @@ mensaje = 'Hola Mundo!'
 #segundos_a_horas(920)
 
 #6---------------------------
-tabla = [1,2,3,4,5,6,7,8,9,10]
-def tabla_multiplicar(num):
-    for i in tabla:
-        tabla[i-1] = i*num 
-    return print(tabla)
+#tabla = [1,2,3,4,5,6,7,8,9,10]
+#def tabla_multiplicar(num):
+#    for i in tabla:
+#        tabla[i-1] = i*num 
+#    return print(tabla)
 
-tabla_multiplicar(6)
+#tabla_multiplicar(6)
+
+#7----------------------------
+
+def operaciones_basicas(a,b):
+    suma=a+b
+    resta=a-b
+    mulpli=a*b
+    division=round(a/b)
+    tupla=[f'La suma es: {suma}',f'La resta es: {resta}',f'La mulplicación da: {mulpli}',f'La división da: {division}']
+    return tupla
+print(operaciones_basicas(2,3))
