@@ -48,11 +48,41 @@ mensaje = 'Hola Mundo!'
 
 #7----------------------------
 
-def operaciones_basicas(a,b):
-    suma=a+b
-    resta=a-b
-    mulpli=a*b
-    division=round(a/b)
-    tupla=[f'La suma es: {suma}',f'La resta es: {resta}',f'La mulplicación da: {mulpli}',f'La división da: {division}']
-    return tupla
-print(operaciones_basicas(2,3))
+#def operaciones_basicas(a,b):
+#    suma=a+b
+#    resta=a-b
+#    mulpli=a*b
+#    division=round(a/b)
+#    tupla=[f'La suma es: {suma}',f'La resta es: {resta}',f'La mulplicación da: {mulpli}',f'La división da: {division}']
+#    return tupla
+#print(operaciones_basicas(2,3))
+
+#8----------------------------- 
+#def calcular_imc(peso=input("hola!"), altura=input("vamos a pedirte unos datos ->")):
+#    peso = int(input("Ingrese el peso en Kilogramos: "))
+#    altura = pow((float(input("Ingrese la altura en Metros: "))), 2)
+#    imc = peso / altura
+#    imc = round(imc, 2)
+#    return print(imc)
+
+#calcular_imc()
+
+#9-------------------------------
+
+#def celsius_a_farenheit():
+#    celsius=int(input("Ingrese la temperatura en grados Celsius C°: "))
+#    farenheit = (celsius * 9/5) + 32
+#    return print(f'La temperatura en grados Farenheit es de: {farenheit}')
+
+#celsius_a_farenheit()
+
+#10----------------------------
+
+#def calcular_promedio():
+#    a=int(input("Ingrese un numero entero positivo: "))
+#    b=int(input("Ingrese otro numero entero positivo: "))
+#    c=int(input("Ingrese otro numero entero positivo: "))
+#    promedio = round((a+b+c)/3)
+
+#    return print(promedio)
+#calcular_promedio()
