@@ -61,14 +61,45 @@
 
 #6-----------------------------------
 
-def suma_digitos(n):
-    if n < 0:
-        return "Ingrese un numero mayor que 0"
-    if len(str(n)) == 1:
-        return n
-    else:
-        ultimoDigito = n % 10 #Arroja la ultima cifra de n
-        restoNum = n//10 #elimina la ultima cifra y deja el resto del numero
-        return suma_digitos(restoNum) + ultimoDigito  
+# def suma_digitos(n):
+#     if n < 0:
+#         return "Ingrese un numero mayor que 0"
+#     if len(str(n)) == 1:
+#         return n
+#     else:
+#         ultimoDigito = n % 10 #Arroja la ultima cifra de n
+#         restoNum = n//10 #elimina la ultima cifra y deja el resto del numero
+#         return suma_digitos(restoNum) + ultimoDigito  
     
-print(suma_digitos(36511213))
+# print(suma_digitos(36511213))
+
+#7-------------------------------------
+
+# def contar_bloques(bloques):
+#     if bloques == 1:
+#         return bloques
+#     else:
+#         return bloques + contar_bloques(bloques-1)
+    
+# print(contar_bloques(10))
+
+#8----------------------------------------------
+
+# Escribí una función recursiva llamada contar_digito(numero, digito) que reciba un
+# número entero positivo (numero) y un dígito (entre 0 y 9), y devuelva cuántas veces
+# aparece ese dígito dentro del número.
+#  Ejemplos:
+# contar_digito(12233421, 2) → 3
+# contar_digito(5555, 5) → 4
+# contar_digito(123456, 7) → 0 
+
+def contar_digito(numero:int, digito:int):
+    contador=0
+    if numero == 0 or digito < 0 or digito > 9: #Caso base
+        return 0
+    else:
+        if digito == numero%10: #Evalua si el ultimo numero es igual a digito
+            contador = contador+1
+    return contador + contar_digito(numero//10, digito)
+
+print(contar_digito(2228787862,2))
